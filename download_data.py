@@ -32,7 +32,7 @@ def mkdir(dn):
 def download_data(basedir, capture_date):
     url = 'http://pedx.io/data/images-rectified_{}'.format(capture_date)
     dst = os.path.join(basedir, 'images')
-    fn = os.path.join(basedir, '{}.tar.gz'.format(url.split('/')[-1]))
+    fn = os.path.join(basedir, url.split('/')[-1])
     mkdir(dst)
     wget(basedir, url)
     extract(fn, dst)
