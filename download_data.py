@@ -83,6 +83,6 @@ if __name__ == '__main__':
     mkdir(basedir)
 
     capture_dates = ['20171130T2000', '20171207T2024', '20171212T2030']
-    for capture_date in [capture_dates[1]]:
+    for capture_date in capture_dates:
         download_data(basedir, capture_date)
     download_calib(basedir)
