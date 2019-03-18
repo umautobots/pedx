@@ -3,10 +3,13 @@ import sys
 import subprocess
 
 def wget(basedir, url):
-    if sys.platform == 'linux':
+    if 'linux' in sys.platform:
         cmd = 'wget -P {} {}'.format(basedir, url)
-    elif sys.platform == 'darwin':
+    elif 'darwin' in sys.platform:
         cmd = 'cd {} && {{ curl -O {} ; cd -; }}'.format(basedir, url)
+    else:
+        print('wget not implemented for the platform {}'.format(sys.platform))
+        exit()
     print(cmd)
     if subprocess.call(cmd, shell=True) != 0: print('Error: {}'.format(cmd))
 
