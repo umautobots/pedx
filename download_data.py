@@ -70,6 +70,14 @@ def download_data(basedir, capture_date):
     mkdir(dst)
     wget(dst, url)
 
+    # (Optional)
+    # url = 'http://pedx.io/data/images-original_{}'.format(capture_date)
+    # dst = os.path.join(basedir, 'images-original')
+    # fn = os.path.join(basedir, url.split('/')[-1])
+    # mkdir(dst)
+    # wget(basedir, url)
+    # extract(fn, dst)
+
 def download_calib(basedir):
     url = 'http://pedx.io/data/calib.tar.gz'
     dst = os.path.join(basedir, 'calib')

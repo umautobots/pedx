@@ -1,4 +1,5 @@
 
+
 # PedX
 
 This package provides basic tools for working with the PedX dataset [[1]](#references) in Python.
@@ -11,39 +12,46 @@ The dataset is available from the webpage (http://pedx.io/downloads/). You can d
 pedx/
 ├── pedx/
 ├── data/
+│   ├── images/
+│   │   ├── 20171130T2000/
+│   │   ├── 20171207T2024/
+│   │   └── 20171212T2030/
+│   │       ├── ylw79D0/
+│   │       ├── red707B/
+│   │       ├── blu79CF/
+│   │       └── grn43E3/
+│   │           └── 20171212T2030_grn43E3_0001234.jpg
+│   ├── pointclouds/
+│   │   ├── 20171130T2000/
+│   │   ├── 20171207T2024/
+│   │   └── 20171212T2030/
+│   │       └── 20171212T2030_0001234.ply
+│   ├── labels/
+│   |   ├── 2d/
+│   |   │   ├── 20171130T2000/
+│   |   │   ├── 20171207T2024/
+│   |   │   └── 20171212T2030/
+│   |   └── 3d/
+│   |       ├── smpl/
+│   |       │   ├── 20171130T2000/
+│   |       │   ├── 20171207T2024/
+│   |       |   └── 20171212T2030/
+│   |       └── segment/
+│   |           ├── 20171130T2000/
+│   |           ├── 20171207T2024/
+│   |           └── 20171212T2030/
 │   ├── calib/
 │   │   ├── calib_cam_to_cam_blu79CF-grn43E3.txt
 │   │   ├── calib_cam_to_cam_blu79CF-red707B.txt
 │   │   ├── calib_cam_to_range_blu79CF.txt
-│   │   ├── calib_cam_to_range_ylw79D0.txt
-│   ├── images/
-│   │   ├── 20171130T2000/
-│   │   ├── 20171207T2024/
-│   │   ├── 20171212T2030/
-│   │   │   ├── ylw79D0/
-│   │   │   ├── red707B/
-│   │   │   ├── blu79CF/
-│   │   │   ├── grn43E3/
-│   │   │   │   ├── 20171212T2030_grn43E3_0001234.jpg
-│   └── pointclouds/
-│   │   ├── 20171130T2000/
-│   │   ├── 20171207T2024/
-│   │   ├── 20171212T2030/
-│   │   │   ├── 20171212T2030_0001234.ply
-│   └── labels/
-│   │   ├── 2d/
-│   │   │   ├── 20171130T2000/
-│   │   │   ├── 20171207T2024/
-│   │   │   ├── 20171212T2030/
-│   │   ├── 3d/
-│   │   │   │   ├── smpl/
-│   │   │   │   │   ├── 20171130T2000/
-│   │   │   │   │   ├── 20171207T2024/
-│   │   │   │   │   ├── 20171212T2030/
-│   │   │   │   ├── segment/
-│   │   │   │   │   ├── 20171130T2000/
-│   │   │   │   │   ├── 20171207T2024/
-│   │   │   │   │   ├── 20171212T2030/
+│   │   └── calib_cam_to_range_ylw79D0.txt
+│   └── timestamps/
+│       ├── timestamps-images-20171130T2000.txt
+│       ├── timestamps-images-20171207T2024.txt
+│       ├── timestamps-images-20171212T2030.txt
+│       ├── timestamps-pointclouds-20171130T2000.txt
+│       ├── timestamps-pointclouds-20171207T2024.txt
+│       └── timestamps-pointclouds-20171212T2030.txt
 ├── demo.py
 └── README.md
 ```
