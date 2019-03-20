@@ -37,7 +37,7 @@ def download_data(basedir, capture_date):
     wget(basedir, url)
     extract(fn, dst)
 
-    url = 'http://pedx.io/data/pointclouds_{}.tar.gz'.format(capture_date)
+    url = 'http://pedx.io/data/pointclouds_{}'.format(capture_date)
     dst = os.path.join(basedir, 'pointclouds')
     fn = os.path.join(basedir, url.split('/')[-1])
     mkdir(dst)
